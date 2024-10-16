@@ -62,7 +62,7 @@ modules:
       - type: script
         commands:
           - 'if [ -z "$EE_CONF_DIR" ]; then'
-          - '	export EE_CONF_DIR=$XDG_CONFIG_HOME'
+          - '	export EE_CONF_DIR=$XDG_CONFIG_HOME/emptyepsilon'
           - 'fi'
           - 'exec EmptyEpsilon "$@"'
         dest-filename: EmptyEpsilon-wrapper
