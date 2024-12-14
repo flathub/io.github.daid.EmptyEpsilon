@@ -17,8 +17,8 @@ modules:
     subdir: EmptyEpsilon
     config-opts:
       - -DCPACK_PACKAGE_VERSION_MAJOR=2024
-      - -DCPACK_PACKAGE_VERSION_MINOR=08
-      - -DCPACK_PACKAGE_VERSION_PATCH=09
+      - -DCPACK_PACKAGE_VERSION_MINOR=12
+      - -DCPACK_PACKAGE_VERSION_PATCH=08
       - -DSERIOUS_PROTON_DIR=/run/build/EmptyEpsilon/SeriousProton/
       - -Dglm_DIR=/run/build/EmptyEpsilon/glm/cmake/glm/
       - -DFETCHCONTENT_SOURCE_DIR_BASIS=/run/build/EmptyEpsilon/basis-universal/
@@ -31,18 +31,13 @@ modules:
     sources:
       - type: git
         url: https://github.com/daid/EmptyEpsilon
-        tag: EE-2024.08.09
-        commit: cb191f6f5ede5d669a6ae436266a57f32710c816
+        tag: EE-2024.12.08
+        commit: 45c3fd5a39f286572804c6724ad3d91be84a2a9f 
         dest: EmptyEpsilon
-      - type: patch
-        dest: EmptyEpsilon
-        paths:
-          - IconAndDesktopFile.patch
-          - MetaInfo.patch
       - type: git
         url: https://github.com/daid/SeriousProton
-        tag: EE-2024.08.09
-        commit: b4765014f0fb41307b7bc7575767dc6bb17fbe2a
+        tag: EE-2024.12.08
+        commit: af1daf430783483879f185b3f7efc3fc8ee1ffea
         dest: SeriousProton
       - type: git
         url: https://github.com/g-truc/glm
