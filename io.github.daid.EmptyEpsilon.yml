@@ -1,6 +1,6 @@
 id: io.github.daid.EmptyEpsilon
 runtime: org.freedesktop.Platform
-runtime-version: '24.08'
+runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
 command: EmptyEpsilon-wrapper
 finish-args:
@@ -23,6 +23,7 @@ modules:
       - -Dglm_DIR=/run/build/EmptyEpsilon/glm/cmake/glm/
       - -DFETCHCONTENT_SOURCE_DIR_BASIS=/run/build/EmptyEpsilon/basis-universal/
       - -DFETCHCONTENT_SOURCE_DIR_MESHOPTIMIZER=/run/build/EmptyEpsilon/meshoptimizer/
+      - -DCMAKE_POLICY_VERSION_MINIMUM=3.5
     post-install:
         # install wrapper to use xdg base directory for config (for minimal permissions)
       - install -Dpm755 -t "${FLATPAK_DEST}/bin" /run/build/EmptyEpsilon/EmptyEpsilon-wrapper
@@ -32,7 +33,7 @@ modules:
       - type: git
         url: https://github.com/daid/EmptyEpsilon
         tag: EE-2024.12.08
-        commit: 45c3fd5a39f286572804c6724ad3d91be84a2a9f 
+        commit: 45c3fd5a39f286572804c6724ad3d91be84a2a9f
         dest: EmptyEpsilon
       - type: git
         url: https://github.com/daid/SeriousProton
